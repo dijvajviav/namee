@@ -7,20 +7,27 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class Tests {
     @Test
-    @DisplayName("2, 3 => -1")
+    @DisplayName("70도가 입력되었을 때의 결과는 1")
     void t1() {
-        assertThat(new Solution().solution(2, 3)).isEqualTo(-1);
+        assertThat(new Solution().solution(70)).isEqualTo(1);
+
     }
 
     @Test
-    @DisplayName("11, 11 => 1")
+    @DisplayName("91도가 입력되었을 때의 결과는 3")
     void t2() {
-        assertThat(new Solution().solution(11, 11)).isEqualTo(1);
+        assertThat(new Solution().solution(91)).isEqualTo(3);
     }
 
     @Test
-    @DisplayName("7, 99 => -1")
+    @DisplayName("180도가 입력되었을 때의 결과는 4")
     void t3() {
-        assertThat(new Solution().solution(7, 99)).isEqualTo(-1);
+        assertThat(new Solution().solution(180)).isEqualTo(4);
+    }
+
+    @Test
+    @DisplayName("90도가 입력되었을 때의 결과는 2")
+    void t4() {
+        assertThat(new Solution().solution(90)).isEqualTo(2);
     }
 }
